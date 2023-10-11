@@ -1,0 +1,176 @@
+@charset "utf-8";
+/*
+/*	Copyright (c) 2019 - 2021 Marketify
+/*	Author: Marketify
+/*	This file is made for CURRENT TEMPLATE
+
+
+01) ARLO BASE
+02) ARLO TOPBAR
+03) ARLO MOBILE MENU
+04) ARLO HERO
+05) ARLO ABOUT
+06) ARLO SERVICES
+07) ARLO PORTFOLIO
+08) ARLO COUNTER
+09) ARLO NEWS
+10) ARLO CONTACT
+11) ARLO COPYRIGHT
+12) ARLO CURSOR
+13) ARLO RIPPLE EFFECT
+14) ARLO GLITCH EFFECT
+15) ARLO PARTICLE EFFECT
+16) ARLO MEDIA QUERIES (FOR SMALL DEVICES)
+
+
+/*---------------------------------------------------*/
+/*	01) ARLO BASE
+/*---------------------------------------------------*/
+
+/*---------------------------------------------------*/
+/*	12) ARLO CURSOR
+/*---------------------------------------------------*/
+
+.mouse-cursor {
+	position: fixed;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	border-radius: 50%;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	visibility: hidden;
+}
+
+.cursor-inner {
+	margin-left: -3px;
+	margin-top: -3px;
+	width: 6px;
+	height: 6px;
+	z-index: 100;
+	background-color: #e65f78;
+	-webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+	transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.cursor-inner.cursor-hover {
+	margin-left: -40px;
+	margin-top: -40px;
+	width: 80px;
+	height: 80px;
+	background-color: #e65f78;
+	opacity: .3;
+}
+
+.cursor-outer {
+	margin-left: -15px;
+	margin-top: -15px;
+	width: 30px;
+	height: 30px;
+	border: 2px solid #e65f78;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 100;
+	opacity: .5;
+	-webkit-transition: all .08s ease-out;
+	transition: all .08s ease-out;
+}
+
+.cursor-outer.cursor-hover {
+	opacity: 0;
+}
+
+.arlo_tm_all_wrap[data-magic-cursor="hide"] .mouse-cursor {
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -1111;
+}
+
+body.dark .arlo_tm_settings .cursor li:nth-child(1) a,
+.arlo_tm_settings.changed .cursor li:nth-child(1) a {
+	border-color: #000;
+}
+
+body.dark .arlo_tm_settings .cursor li:nth-child(1) a:before,
+.arlo_tm_settings.changed .cursor li:nth-child(1) a:before {
+	background-color: #000;
+}
+
+body.dark .arlo_tm_settings .cursor li .svg,
+.arlo_tm_settings.changed .cursor li .svg {
+	color: #000;
+}
+
+.arlo_tm_settings .cursor {
+	margin: 0px;
+	list-style-type: none;
+	padding-top: 20px;
+}
+
+.arlo_tm_settings .cursor li {
+	margin: 0px 20px 0px 0px;
+	display: inline-block;
+}
+
+.arlo_tm_settings .cursor li a {
+	text-decoration: none;
+	color: #fff;
+	opacity: .4;
+	font-weight: 600;
+}
+
+.arlo_tm_settings .cursor li a.showme {
+	opacity: 1;
+}
+
+.arlo_tm_settings .cursor li:nth-child(1) a {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	border: 2px solid #fff;
+	position: relative;
+	display: inline-block;
+}
+
+.arlo_tm_settings .cursor li:nth-child(1) a:before {
+	position: absolute;
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 100%;
+	background-color: #fff;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+}
+
+.arlo_tm_settings .cursor li .svg {
+	width: 25px;
+	height: 25px;
+	color: #fff;
+}
+
+.arlo_tm_settings .cursor li:nth-child(2) {
+	position: relative;
+	top: -2px;
+}
+
+@media (max-width: 1040px) {
+	.mouse-cursor {
+		display: none;
+	}
+
+	.cursor-inner {
+		display: none;
+	}
+
+	.cursor-inner.cursor-hover {
+		display: none;
+	}
+
+	.cursor-outer {
+		display: none;
+	}
+}
